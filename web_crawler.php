@@ -28,7 +28,7 @@ function file_get_contents_curl($url)
   
    # find each img inside a link
    foreach ($xpath->query('//a[@href]//img') as $img) {
-    // find the link searching <a> element
+    // find the links searching <a> element
     for ($hyperlink = $img; $hyperlink->tagName !== 'a'; $hyperlink = $hyperlink->parentNode);
       $link = $hyperlink->getAttribute('href');
       $image = $img->getAttribute('src');
